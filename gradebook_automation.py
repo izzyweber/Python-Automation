@@ -1,5 +1,7 @@
 import openpyxl
 import math
+
+print("hello izzy! We are working on your exam stats...")
 gradebook = openpyxl.load_workbook("sample_grades.xlsx")
 
 #define sheet
@@ -27,6 +29,7 @@ def mean(array):
 
 def median(array):
   #need to sort array first!
+  array = sorted(array)
   length = len(array)
   if len(array) % 2 == 0:
     middle_location = math.ceil(length/2)
@@ -36,5 +39,7 @@ def median(array):
     middle = array[middle_location]
   return middle
 
+print()
+print("Okay, done! The median for Exam 1 was " + str(median(test_1_scores)) + ", and the mean was " + str(mean(test_1_scores)) + ".")
 
 
