@@ -17,4 +17,10 @@ test_3_scores = []
 for i in range(2, grades.max_row + 1):
   test_3_scores.append(grades["D" + str(i)].value)
 
+#define output measures
 
+def mean(array):
+  sum = 0
+  for number in array:
+    sum +=number
+  return sum/len(array)
