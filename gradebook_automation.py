@@ -1,11 +1,11 @@
 import openpyxl
 import math
 
-print("hello izzy! We are working on your exam stats...")
+print("Hello, Izzy! We are working on your exam stats...")
 gradebook = openpyxl.load_workbook("sample_grades.xlsx")
 
 #define sheet
-grades = gradebook.get_sheet_by_name("Sheet1")
+grades = gradebook["Sheet1"]
 
 #define test score arrays
 test_1_scores = []
@@ -39,7 +39,6 @@ def median(array):
     middle = array[middle_location]
   return middle
 
-print()
 print("Okay, done! The median for Exam 1 was " + str(median(test_1_scores)) + ", and the mean was " + str(mean(test_1_scores)) + ".")
 
 
